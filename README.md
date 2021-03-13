@@ -1,6 +1,8 @@
 # BTH
 This repo holds the Pytorch codes and models for the BTH framework presented on CVPR 2021
 
+We build our model based on [BERT].
+
 **Self-supervised Video Hashing via Bidirectional Transformers**
 
 Shuyan Li, Xiu Li, Jiwen Lu, Jie Zhou
@@ -68,3 +70,5 @@ For any question, please file an issue or contact Lily:
 email: lishuyan_lily@hotmail.com
 
 [SSVH]:https://github.com/lixiangpengcs/Self-Supervised-Video-Hashing
+
+[BERT]:https://arxiv.org/abs/1810.04805

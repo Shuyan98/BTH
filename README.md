@@ -71,4 +71,4 @@ email: lishuyan_lily@hotmail.com
 
 [SSVH]:https://github.com/lixiangpengcs/Self-Supervised-Video-Hashing
 
-[BERT]:https://arxiv.org/abs/1810.04805
+[BERT]: https://github.com/codertimo/BERT-pytorch

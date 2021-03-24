@@ -22,16 +22,16 @@ VGG features are kindly uploaded by the authors of [SSVH]. You can download them
 
 FCV: https://pan.baidu.com/s/1i65ccHv and YFCC: https://pan.baidu.com/s/1bqR8VCF  
 
-Please set the data_root and home_root in args.py. 
+Please set the data_root and home_root in ./utils/args.py. 
 
 You can place these features to in data_root.
 
 
 ### Preprocess
 
-These following data should be prepared before training. Some of them for FCVID have been provided:
+These following data should be prepared before training. Some of them for FCVID have been provided. Generation files are provided in ./utils:
 
-1. Latent features \bar{\bm{h}}. We have uploaded them in ./data/latent_feats.h5. You can also generate this file by yourself.
+1. Latent features. We have uploaded them in ./data/latent_feats.h5. You can also generate this file by yourself.
 
 You should first train BTH model with only mask_loss, and use save_nf function in eval.py to generate it. 
 
@@ -39,7 +39,7 @@ You should first train BTH model with only mask_loss, and use save_nf function i
  
 3. Pseudo labels. We have uploaded them in ./data/train_assit.h5. You can also generate this file by running prepare.py.
 
-4. Similarity matrix. You can directly run apro_adj.py to generate sim_matrix.h5 in data_root. Since this file is very large, we didn't upload it.
+4. Similarity matrix. You can directly run apro_adj.py to generate sim_matrix.h5 and save it in data_root. Since this file is very large, we didn't upload it. 
 
 ## Training BTH
 After correctly setting the path, you can run train.py to train the model. Models will be saved in ./models. 

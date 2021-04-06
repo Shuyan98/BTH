@@ -26,9 +26,7 @@ class BERTLM(nn.Module):
     def __init__(self, frame_size):
 
         super(BERTLM,self).__init__()
-        self.bert1 = BERT(frame_size, hidden=hidden_size, n_layers=1, attn_heads=1, dropout=0.1)
-        self.bert2 = BERT(frame_size, hidden=hidden_size, n_layers=1, attn_heads=1, dropout=0)
-        self.project = nn.Linear(hidden_size,frame_size)
+        self.bert = BERT(frame_size, hidden=hidden_size, n_layers=1, attn_heads=1, dropout=0.1)
         self.restore = nn.Linear(nbits, frame_size)
         self.binary = nn.Linear(hidden_size, nbits)
         self.activation = self.binary_tanh_unit
@@ -45,9 +43,7 @@ class BERTLM(nn.Module):
         return out
     def forward(self, x):
 
-        hid1 = self.bert1(x)
-        hid2 = self.bert2(x)
-        hid = hid1
+        hid = self.bert(x)
         z = self.binary(hid)
         bb = self.activation(z)
         frame = self.restore(bb)

@@ -1,5 +1,5 @@
 # BTH
-This repo holds the Pytorch codes and models for the BTH framework presented on CVPR 2021
+This repo holds the Pytorch codes and models for Self-supervised Video Hashing via Bidirectional Transformers presented on CVPR 2021
 
 We build our model based on [BERT].
 
